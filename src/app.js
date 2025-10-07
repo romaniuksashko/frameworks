@@ -19,8 +19,6 @@
 //   });
 // })
 
-
-
 // import {Chart} from 'chart.js';
 
 // const data = {
@@ -69,28 +67,25 @@
 
 // );
 
+const ctx = document.getElementById("myChart");
 
-
-
-
-
-  const ctx = document.getElementById('myChart');
-
-  new Chart(ctx, {
-    type: 'donut',
-    data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Brown', 'Green', 'Purple', 'Orange'],
-      datasets: [{
-        label: '# of Votes',
+new Chart(ctx, {
+  type: "donut",
+  data: {
+    labels: ["Red", "Blue", "Yellow", "Brown", "Green", "Purple", "Orange"],
+    datasets: [
+      {
+        label: "# of Votes",
         data: [12, 109, 63, 5, 92, 73, 0],
-        borderWidth: 1
-      }]
+        borderWidth: 1,
+      },
+    ],
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
     },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
+  },
+});
